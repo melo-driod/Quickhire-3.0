@@ -1,0 +1,13 @@
+services:
+  quickhire:
+    build: .
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env
+    restart: unless-stopped
+    volumes:
+      - quickhire_uploads:/app/uploads
+
+volumes:
+  quickhire_uploads:

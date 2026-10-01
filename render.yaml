@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: quickhire
+    env: node
+    buildCommand: npm ci
+    startCommand: npm start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: MONGO_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: APP_URL
+        sync: false
+      - key: PAYSTACK_SECRET_KEY
+        sync: false
+      - key: PAYSTACK_CURRENCY
+        value: NGN
+      - key: CORS_ORIGIN
+        sync: false
